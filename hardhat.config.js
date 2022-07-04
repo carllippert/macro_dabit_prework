@@ -28,8 +28,8 @@ module.exports = {
     hardhat: {
       // chainId: 1337,
     },
-    ropsten: {
-      url: "https://ropsten.infura.io/v3/96bcc2a7d547448596676d0b2d5f7447",
+    rinkeby: {
+      url: "https://rinkeby.infura.io/v3/96bcc2a7d547448596676d0b2d5f7447",
       accounts: [privateKey],
     },
   },
