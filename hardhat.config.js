@@ -1,7 +1,10 @@
 require("@nomiclabs/hardhat-waffle");
-
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
+require("dotenv").config();
+
+const privateKey = process.env.FLASH_GORDON_PRIVATE_KEY;
+
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -27,7 +30,7 @@ module.exports = {
     },
     ropsten: {
       url: "https://ropsten.infura.io/v3/96bcc2a7d547448596676d0b2d5f7447",
-      accounts: [`0x${process.env.FLASH_GORDON_PRIVATE_KEY}`],
+      accounts: [privateKey],
     },
   },
 };
